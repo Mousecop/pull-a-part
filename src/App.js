@@ -86,7 +86,11 @@ class App extends Component {
     console.log('Submit works!')
 
     fetch(`${DataOneURL}/?client_id=${clientId}&authorization_code=${authToken}&decoder_query=${dataOneQuery}`, {
-      method: 'POST'
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
     }).then(response => {
       console.log('FETCH RESPONSE:', response)
       return response.json()
