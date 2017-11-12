@@ -6,18 +6,13 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors())
+app.use(cors({origin: '*'}))
 app.use(bodyParser.json())
 // app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.send('Server Running');
 })
-
-
-
-
-
 
 
 server.listen(process.env.PORT || 3001, () => {
