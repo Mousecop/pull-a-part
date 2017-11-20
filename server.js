@@ -4,6 +4,7 @@ const cors = require('cors');
 const http = require('http');
 const request = require('request');
 const app = express();
+const path = require('path');
 const server = http.createServer(app);
 
 
@@ -83,7 +84,7 @@ const dataOneQuery = JSON.stringify({
 
 app.use(cors({origin: '*'}))
 app.use(bodyParser.json())
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(express.static(path.join(__dirname, 'public'))));
 
 app.get('/', (req, res) => {
     res.send('Server Running');
