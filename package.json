@@ -2,6 +2,7 @@
   "name": "pull-a-part",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
@@ -13,7 +14,7 @@
     "request": "^2.83.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
