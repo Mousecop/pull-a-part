@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "json": "^9.0.6",
@@ -14,9 +15,10 @@
     "request": "^2.83.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"npm run src\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:3001/"
 }
