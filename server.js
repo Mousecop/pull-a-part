@@ -103,6 +103,7 @@ app.post('/api/vin-decode', (req, res) => {
             console.log('ERROR:', error)
             console.log('RESPONSE CODE', response.statusCode);
             console.log('BODY', body)
+            res.send('hflflifylifyifiyfyilffl')
         }
     )
 })

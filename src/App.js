@@ -12,7 +12,7 @@ class App extends Component {
   onSubmitHandler = (event) => {
     event.preventDefault()
     console.log('Input Ref', this.vinInput.value)
-    fetch('/api/vin-decode/', {
+    fetch('/api/vin-decode', {
       method: 'POST',
       headers: {
         'Content-Type' : 'application/json',
