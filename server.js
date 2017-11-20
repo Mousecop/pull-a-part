@@ -84,7 +84,7 @@ const dataOneQuery = JSON.stringify({
 
 app.use(cors({origin: '*'}))
 app.use(bodyParser.json())
-app.use(express.static(express.static(path.join(__dirname, 'public'))));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.send('Server Running');
